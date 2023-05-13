@@ -1,0 +1,15 @@
+def potencia(base:int, exponente:int)->int:
+    # Caso base: si el exponente es 0, el resultado es 1
+    if exponente == 0:
+        return 1  
+    # Caso recursivo: calcula la potencia utilizando la recursión
+    return base * potencia(base, exponente)
+if __name__ == "__main__":
+ #pide la base al usuario
+ base=(input("ingrese la base ")) 
+ #pide el exponente al usuario
+ exponente=(input("ingrese el exponente "))
+ #llama la función
+ calculo = potencia(base, exponente)
+ #imprime el resultado
+ print(calculo)

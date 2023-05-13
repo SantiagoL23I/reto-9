@@ -1,0 +1,10 @@
+if __name__ == "__main__":
+    # Se solicita al usuario ingresar el número actual de contagiados y el número de días a partir de hoy.
+    C = float(input("Ingrese el número actual de contagiados: "))
+    D = float(input("Ingrese el número de días a partir de hoy: "))
+    # Se define una lambda para calcular el número total de contagiados.
+    totalContagiados = lambda C, D: C * (2 ** D)
+    # Se llama a la lambda con los valores ingresados por el usuario.
+    contagiados = totalContagiados(C, D)
+    # Se muestra el resultado.
+    print("El número total de personas contagiadas después de " + str(D) + " días es: " + str(contagiados))

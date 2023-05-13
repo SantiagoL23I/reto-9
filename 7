@@ -1,0 +1,31 @@
+import time
+def fibonacciInter(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        a, b = 0, 1
+        for i in range(2, n + 1):
+            a, b = b, a + b
+        return b
+def fibonacciRecur(n):
+    if n <= 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacciRecur(n - 1) + fibonacciRecur(n - 2)
+TI = time.time()
+n = 35
+fibonacciInter(n)
+TF = time.time()
+t = TF - TI
+print("Tiempo de ejecución iterativo para n: "+str(n)+": " +str(t)+ "segundos")
+TI = time.time()
+n = 30
+fibonacciRecur(n)
+TF = time.time()
+t = TF - TI
+print("Tiempo de ejecución recursiva para n: "+str(n)+": "+str(t)+ "segundos")
+

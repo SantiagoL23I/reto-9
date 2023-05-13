@@ -1,0 +1,17 @@
+def calculoPrestamo(*args):
+    # extraer los argumentos en las variables C, i y n
+    C, i, n = args
+    # Calcular el valor final del préstamo utilizando la fórmula
+    valor = C * (1 + ((i / 100) / 12)) ** n
+
+    # Devolver el valor final del préstamo
+    return valor
+if __name__ == "__main__":
+    # Solicitar al usuario ingresar el valor del préstamo inicial, la tasa de interés y el número de meses
+    C = float(input("Ingrese el valor del préstamo inicial: "))
+    i = float(input("Ingrese la tasa de interés: "))
+    n = float(input("Ingrese el número de meses: "))
+    # Llamar a la función calculoPrestamo con los valores ingresados por el usuario
+    valorFinal = calculoPrestamo(C, i, n)
+    # Mostrar el valor final del préstamo
+    print("El valor del préstamo después de " + str(n) + " meses es de: " + str(valorFinal))

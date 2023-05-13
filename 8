@@ -1,0 +1,21 @@
+import math
+
+def perimetroAreaFigura(*args):
+    # extraer los argumentos en las variables radio, base y altura
+    radio, base, altura = args
+    # Cálculo del perímetro
+    perimetro = (2 * (2 * radio * math.pi)) + (2 * (base * altura))
+    # Cálculo del área
+    area = (math.pi * (radio ** 2)) + (base * altura)
+    # Devolver los resultados como una tupla (perimetro, area)
+    return perimetro, area
+if __name__ == "__main__":
+    # Solicitar al usuario ingresar el radio del círculo, la base y la altura del rectángulo
+    radio = float(input("Ingrese el radio del círculo: "))
+    base = float(input("Ingrese la base del rectángulo: "))
+    altura = float(input("Ingrese la altura del rectángulo: "))
+    # Llamar a la función perimetroAreaFigura con los valores ingresados por el usuario
+    perimetro, area = perimetroAreaFigura(radio, base, altura)
+    # Mostrar el área y el perímetro de la figura
+    print("El área de la figura es: " + str(area))
+    print("El perímetro de la figura es: " + str(perimetro))

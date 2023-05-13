@@ -1,0 +1,11 @@
+def totalContagiados(*args):
+    # Desempaquetar los argumentos en las variables C y D
+    C, D = args
+    return C * (2 ** D)
+# Se solicita al usuario ingresar el número actual de contagiados y el número de días a partir de hoy.
+C = float(input("Ingrese el número actual de contagiados: "))
+D = float(input("Ingrese el número de días a partir de hoy: "))
+# Llamar a la función totalContagiados con los valores ingresados por el usuario
+contagiados = totalContagiados(C, D)
+# Mostrar el resultado
+print("El número total de personas contagiadas después de " + str(D) + " días es: " + str(contagiados))

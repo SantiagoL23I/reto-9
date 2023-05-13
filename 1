@@ -1,0 +1,11 @@
+if __name__ == "__main__":
+    # Se solicita al usuario ingresar la cantidad de gallinas, gallos y pollitos.
+    N = float(input("Ingrese la cantidad de gallinas: "))
+    M = float(input("Ingrese la cantidad de gallos: "))
+    k = float(input("Ingrese la cantidad de pollitos: "))
+    # Se define una lambda para calcular la cantidad de carne de aves.
+    cantidadDeCarneAves = lambda N, M, k: (N * 6) + (M * 7) + k
+    # Se llama a la lambda con los valores ingresados por el usuario.
+    cantidadDeCarne = cantidadDeCarneAves(N, M, k)
+    # Se muestra el resultado.
+    print("La cantidad de carne de aves es de: " + str(cantidadDeCarne) + " kg")

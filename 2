@@ -1,0 +1,17 @@
+if __name__ == "__main__":
+    # Se solicita al usuario ingresar el valor del billete y las cantidades de panes, huevos y leche.
+    pesos = float(input("Ingrese el valor del billete: "))
+    pan = float(input("Ingrese la cantidad de panes: "))
+    huevos = float(input("Ingrese la cantidad de huevos: "))
+    leche = float(input("Ingrese la cantidad de leche: "))
+    # Se define una lambda para calcular el costo de la compra.
+    costo = lambda pan, huevos, leche: (pan * 300) + (leche * 3300) + (huevos * 350)
+    # Se calcula el costo de la compra utilizando la lambda y las cantidades ingresadas.
+    valor = costo(pan, huevos, leche)
+    # Se calcula el cambio o la cantidad faltante.
+    p = pesos - valor
+    # Se comprueba si el monto ingresado es suficiente y se muestra el resultado correspondiente.
+    if pesos > valor:
+        print("Sus vueltas son " + str(p) + " pesos")
+    if valor > pesos:
+        print("Usted debe " + str(-p) + " pesos")
