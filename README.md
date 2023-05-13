@@ -160,4 +160,5 @@ t = TF - TI  # Cálculo del tiempo transcurrido
 print("Tiempo de ejecución recursiva para n: " + str(n) + ": " + str(t) + " segundos")
 
    ```
-   
+  #enlace stackoverflow https://stackoverflow.com/users/21890977/santiago-nicolas-linares-gonza 
+  #enlace linkedin https://www.linkedin.com/in/santiago-linares-39280b276/
